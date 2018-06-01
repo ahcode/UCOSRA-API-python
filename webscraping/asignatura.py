@@ -12,8 +12,8 @@ def lista_titulaciones():
     return t
 
 def lista_asignaturas(titulacion):
-    page = requests.get(ConsultaReservasAsignaturaUrl + "&tTit=" + titulacion + "&tAsig=---")
+    page = requests.get(ConsultaReservasAsignaturaUrl, params={'tTit':titulacion, 'tAsig':'---'})
     soup = BeautifulSoup(page.content, 'html.parser')
     titulaciones = list(soup.find('select', {'class':'listaG', 'name':'ttp2'}).find_all('option'))
-    t = [(item['value'], item.get_text().split(' ', 2)[2]) for item in titulaciones[1:]]
+    t = [(item['value'].split(' ', 1)[0], item.get_text().split(' ', 3)[3]) for item in titulaciones[1:]]
     return t
