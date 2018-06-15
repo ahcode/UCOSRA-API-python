@@ -3,7 +3,7 @@
 from flask import Flask, request
 from flask_restful import Resource, Api
 from webscraping.asignatura import lista_titulaciones, lista_asignaturas, lista_reservas_asignatura
-import json
+from datetime import datetime
 
 app = Flask(__name__)
 api = Api(app)
@@ -28,9 +28,9 @@ class ReservasAsignatura(Resource):
             if 'grupo' in args: grupo = args['grupo']
             else: grupo = "T"
             if 'fechaini' in args: fechaini = args['fechaini']
-            else: fechaini = "01-06-2018" #TODO hoy
+            else: fechaini = datetime.now().strftime("%d-%m-%Y")
             if 'fechafin' in args: fechafin = args['fechafin']
-            else: fechafin = "01-06-2018" #TODO hoy
+            else: fechafin = datetime.now().strftime("%d-%m-%Y")
         return lista_reservas_asignatura(args['titulacion'], args['asignatura'], grupo, fechaini, fechafin)
 
 api.add_resource(Titulaciones, '/titulaciones')
