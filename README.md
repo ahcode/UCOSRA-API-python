@@ -26,7 +26,6 @@ http://localhost:5002/titulaciones
 ```
 ``` json
 [
-    ......
 	[
 		"0108",
 		"GRADO DE INGENIERÍA FORESTAL"
@@ -39,7 +38,6 @@ http://localhost:5002/titulaciones
 		"0111",
 		"GRADO DE INGENIERÍA MECÁNICA"
 	],
-	......
 ]
 ```
 
@@ -49,7 +47,6 @@ localhost:5002/asignaturas?titulacion=0114
 ```
 ``` json
 [
-    ......
     [
 		"101384",
 		"ÁLGEBRA LINEAL"
@@ -62,7 +59,6 @@ localhost:5002/asignaturas?titulacion=0114
 		"101397",
 		"ARQUITECTURA DE COMPUTADORES"
 	],
-	......
 ]
 ```
 
@@ -77,7 +73,6 @@ localhost:5002/reservasasignatura?titulacion=0114&asignatura=101384&fechaini=01-
 
 ``` json
 [
-    ......
     {
 		"fecha": "01-03-2018",
 		"horaFin": "14:00",
@@ -94,7 +89,6 @@ localhost:5002/reservasasignatura?titulacion=0114&asignatura=101384&fechaini=01-
 		"profesor": "",
 		"grupo": "1"
 	},
-	......
 ]
 ```
 
