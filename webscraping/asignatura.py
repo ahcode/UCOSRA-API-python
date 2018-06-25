@@ -27,8 +27,10 @@ def lista_reservas_asignatura(titulacion, asignatura, grupo, fechaini, fechafin)
         item = list(item.find_all('td'))
         fecha = item[0].next.get_text()
         [timeIni, timeFin] = item[4].get_text().split('-')
-        aulaCode = item[5].next.get_text().split(' ', 1)[0]
+        aula = item[5].next.get_text().split(' ', 1)
+        aulaCode = aula[0]
+        detallesAula = aula[1]
         profesor = item[6].get_text()
         grupo = item[8].get_text()
-        reservas.append({'fecha':fecha, 'horaIni':timeIni, 'horaFin':timeFin, 'aula':aulaCode, 'profesor':profesor, 'grupo':grupo})
+        reservas.append({'fecha':fecha, 'horaIni':timeIni, 'horaFin':timeFin, 'codigo-aula':aulaCode, 'aula':detallesAula, 'profesor':profesor, 'grupo':grupo})
     return reservas

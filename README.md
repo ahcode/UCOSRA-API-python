@@ -47,7 +47,7 @@ localhost:5002/asignaturas?titulacion=0114
 ```
 ``` json
 [
-    [
+	[
 		"101384",
 		"ÁLGEBRA LINEAL"
 	],
@@ -73,19 +73,21 @@ localhost:5002/reservasasignatura?titulacion=0114&asignatura=101384&fechaini=01-
 
 ``` json
 [
-    {
+	{
+		"codigo-aula": "01051MA",
 		"fecha": "01-03-2018",
 		"horaFin": "14:00",
 		"horaIni": "12:00",
-		"aula": "01051MA",
+		"aula": "Campus de Rabanales. Albert Einstein (C2SO003). Aula 1 de Matemáticas.",
 		"profesor": "",
 		"grupo": "2"
 	},
 	{
+		"codigo-aula": "0111B06",
 		"fecha": "02-03-2018",
 		"horaFin": "11:30",
 		"horaIni": "10:00",
-		"aula": "0111B06",
+		"aula": "Campus de Rabanales. Aulario Averroes (AUPB430) Aula B 6",
 		"profesor": "",
 		"grupo": "1"
 	},
