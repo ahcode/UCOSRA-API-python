@@ -1,6 +1,6 @@
-# UCOSRA-API
+# UCOSRA-API-python
 
-*En Desarrollo*
+*Proyecto abandonado. Nueva implementación -> [UCOSRA-API](https://github.com/ahcode/UCOSRA-API/)*
 
 Implementación simple de una API para el sistema de reserva de aulas de la Universidad de Córdoba utilizalndo Flask y BeautifulSoup.
 
